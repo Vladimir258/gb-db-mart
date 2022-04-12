@@ -1,0 +1,12 @@
+
+*.class
+
+.idea/
+
+target/classes/test-data.sql
+
+target/classes/logback.xml
+
+target/classes/jdbc.properties
+
+target/classes/ddl.sql
