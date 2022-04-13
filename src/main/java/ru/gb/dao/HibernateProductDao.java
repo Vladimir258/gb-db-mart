@@ -18,7 +18,7 @@ public class HibernateProductDao implements ProductDao {
     @Override
     @Transactional(readOnly = true)
     public List<Product> findAll() {
-        return Collections.unmodifiableList(sessionFactory.getCurrentSession().createQuery("from \"public\".\"PRODUCT\" m").list());
+        return Collections.unmodifiableList(sessionFactory.getCurrentSession().createQuery("from Product m").list());
     }
 
     @Override

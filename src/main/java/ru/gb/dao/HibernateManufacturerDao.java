@@ -18,7 +18,7 @@ public class HibernateManufacturerDao implements ManufacturerDao {
     @Override
     @Transactional(readOnly = true)
     public List<Manufacturer> findAll() {
-        return Collections.unmodifiableList(sessionFactory.getCurrentSession().createQuery("from \"public\".\"MANUFACTURER\" m").list());
+        return Collections.unmodifiableList(sessionFactory.getCurrentSession().createQuery("from Manufacturer m").list());
     }
 
     @Override

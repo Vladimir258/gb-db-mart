@@ -13,12 +13,12 @@ import java.time.LocalDate;
 @Builder
 @ToString
 @Entity
-@Table(name = "\"public\".\"PRODUCT\"")
+@Table(name = "PRODUCT")
 @NamedQueries({
         @NamedQuery(name = "Product.findTitleById",
-                query = "select m.title from \"public\".\"PRODUCT\" m where m.id = :id"),
+                query = "select m.title from Product m where m.id = :id"),
         @NamedQuery(name = "Product.findById",
-                query = "select m from \"public\".\"PRODUCT\" m where m.id = :id")
+                query = "select m from Product m where m.id = :id")
 })
 public class Product {
     @Id
@@ -29,6 +29,6 @@ public class Product {
     private String title;
     @Column(name = "cost")
     private BigDecimal cost;
-    @Column(name = "date")
+    @Column(name = "manufacture_date")
     private LocalDate date;
 }
