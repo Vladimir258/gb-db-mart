@@ -28,8 +28,8 @@ public class HibernateConfig {
     private String driverClassName;
     @Value("${url}")
     private String url;
-    @Value("${username}")
-    private String username;
+    @Value("${nick}")
+    private String nick;
     @Value("${password}")
     private String password;
 
@@ -40,7 +40,7 @@ public class HibernateConfig {
             Class<? extends Driver> driver = (Class<? extends Driver>) Class.forName(driverClassName);
             dataSource.setDriverClass(driver);
             dataSource.setUrl(url);
-            dataSource.setUsername(username);
+            dataSource.setUsername(nick);
             dataSource.setPassword(password);
             return dataSource;
         } catch (ClassNotFoundException e) {
